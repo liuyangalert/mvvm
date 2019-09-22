@@ -4,7 +4,9 @@ export class Model {
       this.subscribers = []
     }
     publish (data) {
-      this.subscribers.forEach(callback => callback(data))
+      console.log(this.subscribers);
+      this.subscribers.forEach(callback => callback(data));
+      console.log(this.subscribers);
     }
   }
   
@@ -15,6 +17,7 @@ export class Model {
       this.view = conf.view
       this.render = this.render.bind(this)
       this.el.addEventListener('click', (e) => {
+        console.log(e);
         e.stopPropagation()
         const rules = Object.keys(conf.onClick || {})
         rules.forEach((rule) => {

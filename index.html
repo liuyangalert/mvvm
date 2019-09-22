@@ -10,41 +10,36 @@
         content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>Title</title>
-    <style type="text/css">
-
-    </style>
-    <script src="./index.js"></script>
 </head>
 
 <body>
-    <div class="ss">
-        <div class="www">
-            <div class="ww">ww</div>
-        </div>
-        <div class="ee">ee</div>
-    </div>
+    <h1>mvvm演示</h1>
+    <diV id="app">
+        <input type="text" b-value="input.message" b-on-input="handlerInput"/>
+        <div>{{ input.message }}</div>
+        <div b-text="text"></div>
+        <div>{{ text }}</div>
+        <div b-html="htmlMessage"></div>
+    </diV>
 </body>
+<script src="./mediator.js"></script>
+<script src="./mvvm.js"></script>
 <script>
-class MyClass {
-  constructor() {
-      this.aaa  = this.prop
-  }
-  get prop() {
-      console.log('adffs')
-    return 'getter';
-  }
-  set prop(value) {
-    console.log('setter: '+value);
-  }
-}
-
-let inst = new MyClass();
-
-// inst.prop = 123;
-// // setter: 123
-
-// inst.prop
-
-</script>
+    let vm = new Mvvm({
+      el: '#app',
+      data: {
+        input: {
+          message: 'Hello Input!'
+        },
+        text: 'ziyi2',
+        htmlMessage: `<button>提交</button>`
+      },
+      methods: {
+        handlerInput(e) {
+          this.text = e.target.value
+        }
+      }
+    })
+  </script>
 
 </html>
