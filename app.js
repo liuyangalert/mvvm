@@ -1,2 +1,3 @@
-console.log('hello world');
-console.log('www.hao123.com')
+export default class aa {
+    
+}

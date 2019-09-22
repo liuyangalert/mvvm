@@ -1,0 +1,30 @@
+{
+  "name": "mvc",
+  "version": "1.0.0",
+  "description": "Demo MVC framework in 40 lines, 1KB",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "dev": "webpack-dev-server --open --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyangalert/mvvm.git"
+  },
+  "author": "liuliu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuyangalert/mvvm/issues"
+  },
+  "homepage": "https://github.com/liuyangalert/mvvm#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}
